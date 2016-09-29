@@ -358,21 +358,3 @@ function notifyOfAccountsWithErrors(erroredAccounts) {
   }
 }
 
-
-function prepare_drive_dir(parent_obj, dir_name) {
-    var folders = parent_obj.getFoldersByName(dir_name);
-    if (folders.hasNext()) {
-        //Logger.log('Folder name: '+dir_name+' found.  Using existing folder.');
-        return folders.next();
-    }
-    //Logger.log('Creating folder name: '+dir_name);
-    return parent_obj.createFolder(dir_name);
-}
-
-function file_exists( dir_obj, fname ) {
-  var filesIterator = dir_obj.getFilesByName(fname);
-  if (filesIterator.hasNext()) {
-      return true;
-  }
-  return false;
-}
