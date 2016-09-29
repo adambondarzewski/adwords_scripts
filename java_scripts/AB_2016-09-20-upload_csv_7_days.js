@@ -98,9 +98,7 @@ var CONFIG = {
 };
 
 
-function main() {
-  
-  
+// main function
 Logger.log(time_period);
   
   if (!day_dir_locked()) {
@@ -119,8 +117,7 @@ Logger.log(time_period);
   } else {
     Logger.log('Omiting import. Dir locked');
   }
-}
-
+// end of main function
 
 function create_lock() {
   var drive_dir_daily     = prepare_drive_dir(DriveApp, DRIVE_DIR_DAILY_NAME);
